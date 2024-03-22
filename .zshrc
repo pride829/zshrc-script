@@ -99,7 +99,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias zshc="vim ~/.zshrc"
 alias zshs="source ~/.zshrc"
-alias zshcp="cp ~/.zshrc ~/git/zshrc-script && (cd ~/git/zshrc-script && gc '' --allow-empty-message -a)"
+
+function zshcp () {
+    echo $1
+    cp ~/.zshrc ~/git/zshrc-script && (cd ~/git/zshrc-script && echo $1 -a)
+}
 
 function rem () {
     echo "Notify in $1 minutes"
