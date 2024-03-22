@@ -102,7 +102,7 @@ alias zshs="source ~/.zshrc"
 
 function zshcp () {
     echo $1
-    cp ~/.zshrc ~/git/zshrc-script && (cd ~/git/zshrc-script && echo $1 -a)
+    cp ~/.zshrc ~/git/zshrc-script && (cd ~/git/zshrc-script && git commit -m "$1" -a)
 }
 
 function rem () {
