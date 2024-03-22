@@ -125,7 +125,7 @@ alias gd="git diff"
 
 # For display settings
 
-# Turn on the displays on the ground
-alias dpg="xrandr --output DP-0 --off && xrandr --output HDMI-0 --auto && xrandr --output DP-5 --auto --right-of HDMI-0"
+# Turn on the monitors
+alias dpm="xrandr --output DP-0 --off && xrandr --output HDMI-0 --auto && xrandr --output DP-5 --auto --right-of HDMI-0"
 # Turn on the projector 
 alias dpp="xrandr --output DP-0 --auto && xrandr --output HDMI-0 --off && xrandr --output DP-5 --off"
