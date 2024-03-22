@@ -101,8 +101,11 @@ alias zshc="vim ~/.zshrc"
 alias zshs="source ~/.zshrc"
 
 function zshcp () {
-    echo $1
-    cp ~/.zshrc ~/git/zshrc-script && (cd ~/git/zshrc-script && git commit -m "$1" -a)
+    if [[ -n "$1" ]]; then
+        cp ~/.zshrc ~/git/zshrc-script && (cd ~/git/zshrc-script && gl && git commit -m "$1" -a && gp)
+    else
+        echo "Commit message can not be empty."
+    fi
 }
 
 function rem () {
@@ -119,3 +122,10 @@ alias ga="git add"
 alias gc="git commit -m "
 alias gs="git status"
 alias gd="git diff"
+
+# For display settings
+
+# Turn on the displays on the ground
+alias dpg="xrandr --output DP-0 --off && xrandr --output HDMI-0 --auto && xrandr --output DP-5 --auto --right-of HDMI-0"
+# Turn on the projector 
+alias dpp="xrandr --output DP-0 --auto && xrandr --output HDMI-0 --off && xrandr --output DP-5 --off"
