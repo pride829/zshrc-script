@@ -120,6 +120,10 @@ function rem25 () {
 
 alias ga="git add"
 alias gc="git commit -m "
+alias gca="ga && gc"
+function gcap () {
+	git commit -m $1 && gp	
+}
 alias gs="git status"
 alias gd="git diff"
 
